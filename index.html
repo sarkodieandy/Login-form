@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Sign in | LumaDesk</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="brand-panel" aria-label="About LumaDesk">
+      <div class="brand-name"><span class="brand-icon">L</span> LumaDesk</div>
+      <div class="brand-visual" aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="visual-card card-top"><span class="visual-dot"></span> Your workspace</div>
+        <div class="visual-card card-bottom"><span class="visual-check">✓</span> All in one place</div>
+      </div>
+      <div class="brand-copy">
+        <span class="eyebrow">THE SIMPLER WORKSPACE</span>
+        <h2>Keep your work moving.</h2>
+        <p>One calm space for the things that matter most.</p>
+      </div>
+      <p class="brand-footer">A clean little frontend demo.</p>
+    </section>
+
+    <section class="form-panel" aria-labelledby="login-title">
+      <div class="form-content">
+        <p class="top-label">WELCOME BACK</p>
+        <h1 id="login-title">Sign in to your account</h1>
+        <p class="intro-text">Enter your details below to continue.</p>
+
+        <form id="loginForm" novalidate>
+          <div class="field-group">
+            <label for="email">Email address</label>
+            <input class="field-input" id="email" name="email" type="email"
+                   placeholder="you@example.com" autocomplete="email"
+                   aria-describedby="emailError" required>
+            <span class="field-error" id="emailError" aria-live="polite"></span>
+          </div>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input class="field-input" id="password" name="password" type="password"
+                     placeholder="At least 8 characters" autocomplete="current-password"
+                     aria-describedby="passwordError" minlength="8" required>
+              <button id="togglePassword" class="toggle-password" type="button"
+                      aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+            <span class="field-error" id="passwordError" aria-live="polite"></span>
+          </div>
+
+          <button class="submit-button" type="submit">Continue <span aria-hidden="true">→</span></button>
+          <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+        </form>
+        <div class="demo-note"><span aria-hidden="true">ⓘ</span> Frontend demo only. No information is sent to a server.</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
